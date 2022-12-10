@@ -1,9 +1,14 @@
 {
+  "extends": "./otherTsconfig.json", // 继承其他配置
   "compileOnSave": false,
   "compilerOptions": {
+    "alwaysStrict": true, // 严格模式
     "outDir": "./dist/",
+    "resolveJsonModule": true, // 允许导入json文件,需要配合 allowSyntheticDefaultImports
+    // "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true, // 默认情况下可以理解成typescript将函数中的this as any，而oImplicitThis:true的情况下，必须去声明this的类型，才能在函数或者对象中使用this.
     "sourceMap": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true, // 不允许隐式any类型
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "declaration": true,
