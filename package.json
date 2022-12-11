@@ -6,6 +6,8 @@
   "types": "./dist/types/index.d.ts",
   "private": false,
   "scripts": {
+    "g-check": "ts-node ./src/runtime-check/generator/index.ts",
+    "check": "ts-node ./src/runtime-check/index.ts",
     "build": "tsc --watch",
     "test": "jest"
   },
@@ -23,7 +25,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.1",
-    "@types/node": "^10.5.5",
+    "@types/node": "^10.17.60",
     "clean-webpack-plugin": "^1.0.1",
     "jest": "^23.4.2",
     "prettier": "^1.16.4",
@@ -36,6 +38,9 @@
     "webpack": "^4.28.1"
   },
   "dependencies": {
-    "@types/react": "^18.0.26"
+    "@types/react": "^18.0.26",
+    "jsonschema": "^1.4.1",
+    "ts-node": "^10.9.1",
+    "typescript-json-schema": "^0.55.0"
   }
 }
